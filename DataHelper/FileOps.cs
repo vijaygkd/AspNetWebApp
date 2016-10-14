@@ -3,33 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FileHelpers;
 using Microsoft.VisualBasic.FileIO;
 
 namespace DataHelper
 {
-    internal class FileOps
+    internal static class FileOps
     {
-        private string FilePath = "C:\\MySource\\Repo\\AspNetWebApp\\DataHelper\\data\\columbus.csv";
+        private static string FilePath = "C:\\MySource\\Repo\\AspNetWebApp\\DataHelper\\data\\columbus.csv";
 
-
-        public string ReadFile()
+        public static LogEntry[] ReadLogs()
         {
-            using (TextFieldParser parser = new TextFieldParser(FilePath))
-            {
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters("\t");
-                while (!parser.EndOfData)
-                {
-                    string[] fields = parser.ReadFields();
-                }
-
-            }
-
-            return null;
+            var engine = new FileHelperEngine<LogEntry>();
+            var logs = engine.ReadFile(FilePath);
+            return logs;
         }
-
-
-        
 
     }
 }
