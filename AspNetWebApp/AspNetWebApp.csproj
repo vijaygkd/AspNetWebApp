@@ -254,10 +254,6 @@
       <Project>{b4206fa9-8836-413a-ad53-d9e28f8e93df}</Project>
       <Name>DataHelper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataModels\DataModels.csproj">
-      <Project>{0b0359ae-7cdd-44f0-af0c-17553add1051}</Project>
-      <Name>DataModels</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

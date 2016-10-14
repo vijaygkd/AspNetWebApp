@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetWebApp", "AspNetWebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHelper", "DataHelper\DataHelper.csproj", "{B4206FA9-8836-413A-AD53-D9E28F8E93DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModels", "DataModels\DataModels.csproj", "{0B0359AE-7CDD-44F0-AF0C-17553ADD1051}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{B4206FA9-8836-413A-AD53-D9E28F8E93DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4206FA9-8836-413A-AD53-D9E28F8E93DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4206FA9-8836-413A-AD53-D9E28F8E93DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B0359AE-7CDD-44F0-AF0C-17553ADD1051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B0359AE-7CDD-44F0-AF0C-17553ADD1051}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B0359AE-7CDD-44F0-AF0C-17553ADD1051}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B0359AE-7CDD-44F0-AF0C-17553ADD1051}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
