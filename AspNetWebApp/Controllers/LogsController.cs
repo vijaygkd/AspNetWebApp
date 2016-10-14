@@ -11,8 +11,7 @@ namespace AspNetWebApp.Controllers
         // GET: Logs
         public ActionResult Index()
         {
-            
-            return View();
+            return View(DataHelper.LogProvider.Logs);
         }
     }
 }
