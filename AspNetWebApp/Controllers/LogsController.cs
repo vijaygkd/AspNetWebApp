@@ -15,17 +15,37 @@ namespace AspNetWebApp.Controllers
         }
 
         // GET: Logs
-        public ActionResult Index(string searchString)
+        [Route("logs/{year=0}/{month=}/{day=0}")]
+        public ActionResult Index(string searchString, int? year, string month, int? day)
         {
             var logs = LogProvider.Logs;
 
+            if (year > 0)
+            {
+                logs = logs
+                        .Where(log => log.Year == year)
+                        .ToList();
+            }
+            if (!string.IsNullOrWhiteSpace(month))
+            {
+                logs = logs
+                        .Where(log => log.Month.IndexOf(month, StringComparison.OrdinalIgnoreCase) >= 0)
+                        .ToList();
+
+            }
+            if (day > 0)
+            {
+                logs = logs
+                        .Where(log => log.Day == day)
+                        .ToList();
+            }
             if (!string.IsNullOrWhiteSpace(searchString))
             {
-                logs = DataHelper.LogProvider.Logs
+                logs = logs
                         .Where(log => log.Text.IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0)
                         .ToList();
 
-            }           
+            }
 
             return View(logs);
         }

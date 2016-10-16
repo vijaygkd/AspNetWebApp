@@ -10,11 +10,13 @@
 {
     <p>
         Text: @Html.TextBox("SearchString") <br />
+        Year: @Html.TextBox("Year") <br />
         <input type="submit" value="Filter" />
     </p>
 }
 
 <table class="table">
+
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Day)
