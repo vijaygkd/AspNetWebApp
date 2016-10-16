@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DataHelper;
 
 namespace AspNetWebApp.Controllers
 {
@@ -14,9 +15,19 @@ namespace AspNetWebApp.Controllers
         }
 
         // GET: Logs
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(DataHelper.LogProvider.Logs);
+            var logs = LogProvider.Logs;
+
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                logs = DataHelper.LogProvider.Logs
+                        .Where(log => log.Text.IndexOf(searchString, StringComparison.OrdinalIgnoreCase) >= 0)
+                        .ToList();
+
+            }           
+
+            return View(logs);
         }
     }
 }

@@ -6,6 +6,14 @@
 
 <h3>Logs of Columbus</h3>
 
+@using (Html.BeginForm("Index", "Logs", FormMethod.Get))
+{
+    <p>
+        Text: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Filter" />
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>

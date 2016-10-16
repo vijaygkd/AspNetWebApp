@@ -8,11 +8,11 @@ namespace DataHelper
 {
     public static class LogProvider
     {
-        public static LogEntry[] Logs;
+        public static List<LogEntry> Logs;
 
         public static void Init()
         {
-            Logs = FileOps.ReadLogs();
+            Logs = FileOps.ReadLogs().ToList();
         }
     }
 }
