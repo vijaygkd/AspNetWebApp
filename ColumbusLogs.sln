@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetWebApp", "AspNetWebApp\AspNetWebApp.csproj", "{01B641D5-7866-45B8-B2C3-6AF39137B419}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumbusLogs.Web", "AspNetWebApp\ColumbusLogs.Web.csproj", "{01B641D5-7866-45B8-B2C3-6AF39137B419}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataHelper", "DataHelper\DataHelper.csproj", "{B4206FA9-8836-413A-AD53-D9E28F8E93DF}"
 EndProject
