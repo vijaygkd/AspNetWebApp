@@ -15,7 +15,7 @@ namespace DataHelper
         /// Initialize the data seeding from source file.
         /// </summary>
         /// <returns></returns>
-        public static async Task Init()
+        public static void Init()
         {
             _data = FileOps.ReadLogs().ToList();
         }

@@ -46,5 +46,18 @@ namespace Core
 
             return logs.ToList();
         }
+
+        public IList<LogEntry> SortLogs(string order)
+        {
+            IEnumerable<LogEntry> logs = _dataProvider.GetData();
+            if(order.Equals("A", StringComparison.OrdinalIgnoreCase))
+            {
+                return logs.OrderBy(log => log.GetDateTime()).ToList();
+            }
+            else
+            {
+                return logs.OrderByDescending(log => log.GetDateTime()).ToList();
+            }
+        }
     }
 }

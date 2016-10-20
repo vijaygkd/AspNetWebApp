@@ -18,7 +18,15 @@ namespace Models
 
         public int Year;
 
-
+        //public DateTime Date
+        //{
+        //    get
+        //    {
+        //        var dateFormat = "d MMMM YYYY";
+        //        var dateString = $"{this.Day} {this.Month} {this.Year}";
+        //        return DateTime.ParseExact(dateString, dateFormat, CultureInfo.InvariantCulture);
+        //    }
+        //}
 
         [FieldQuoted()]
         public string Text;
