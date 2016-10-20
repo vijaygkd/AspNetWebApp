@@ -15,5 +15,7 @@ namespace Core
         IList<LogEntry> GetLogsByDate(int? year, string month, int? day);
 
         IList<LogEntry> SortLogs(string order);
+
+        IList<LogEntry> GetTodaysLogs();
     }
 }

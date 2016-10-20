@@ -47,6 +47,21 @@ namespace Core
             return logs.ToList();
         }
 
+        public IList<LogEntry> GetTodaysLogs()
+        {           
+            var day = DateTime.Now.Day;
+            var month = DateTime.Now.Month;
+
+            IEnumerable<LogEntry> logs = _dataProvider.GetData();
+
+            var todaysLogs = from log in logs
+                             let date = log.GetDateTime()
+                             where date.Day == day && date.Month == month
+                             select log;
+
+            return todaysLogs.ToList();
+        }
+
         public IList<LogEntry> SortLogs(string order)
         {
             IEnumerable<LogEntry> logs = _dataProvider.GetData();

@@ -27,6 +27,7 @@ namespace AspNetWebApp.Controllers
 
             var logs = _apiProvider.GetLogsByDate(year, month, day);
 
+            ViewBag.Note = "Diary of Columbus";
             return View(logs.ToList());
         }
 
@@ -44,8 +45,26 @@ namespace AspNetWebApp.Controllers
 
             var logs = _apiProvider.SortLogs(order);
 
+            var sortOrder = order.Equals("a", StringComparison.OrdinalIgnoreCase) ? "Ascending" : "Descending";
+            ViewBag.Note = $"Logs Sorted {sortOrder}";
             return View("Index", logs);
 
+        }
+
+        [Route("logs/today")]
+        public ActionResult Today()
+        {
+            var logs = _apiProvider.GetTodaysLogs();
+            if (logs.Any())
+            {
+                ViewBag.Note = "Today in history of Columbus";
+            }
+            else
+            {
+                ViewBag.Note = "No history today!";
+            }
+            
+            return View("Index", logs);
         }
     }
 }
