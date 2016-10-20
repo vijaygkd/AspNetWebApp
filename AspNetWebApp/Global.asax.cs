@@ -18,7 +18,7 @@ namespace AspNetWebApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             // Read logs
-            DataHelper.LogProvider.Init();
+            DataHelper.SeedData.Init();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FileHelpers;
 
-namespace DataHelper
+namespace Models
 {
     [DelimitedRecord(","), IgnoreFirst(1)]
     public class LogEntry
@@ -18,15 +18,7 @@ namespace DataHelper
 
         public int Year;
 
-        //public DateTime Date
-        //{
-        //    get
-        //    {
-        //        var dateFormat = "d MMMM YYYY";
-        //        var dateString = $"{this.Day} {this.Month} {this.Year}";
-        //        return DateTime.ParseExact(dateString, dateFormat, CultureInfo.InvariantCulture);
-        //    }
-        //}
+
 
         [FieldQuoted()]
         public string Text;

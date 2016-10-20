@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FileHelpers;
 using Microsoft.VisualBasic.FileIO;
+using Models;
 
 namespace DataHelper
 {
@@ -12,10 +13,10 @@ namespace DataHelper
     {
         private static string FilePath = "C:\\MySource\\Repo\\AspNetWebApp\\DataHelper\\data\\columbus.csv";
 
-        public static LogEntry[] ReadLogs()
+        public static List<LogEntry> ReadLogs()
         {
             var engine = new FileHelperEngine<LogEntry>();
-            var logs = engine.ReadFile(FilePath);
+            var logs = engine.ReadFileAsList(FilePath);
             return logs;
         }
 

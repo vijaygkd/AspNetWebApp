@@ -250,9 +250,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{0603bd9a-e236-42b0-b022-5d738cf39d1a}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataHelper\DataHelper.csproj">
       <Project>{b4206fa9-8836-413a-ad53-d9e28f8e93df}</Project>
       <Name>DataHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{709d14e9-fc8b-4dab-927a-a63595b18313}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
