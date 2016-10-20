@@ -12,9 +12,9 @@ namespace Models
         public static DateTime GetDateTime(this LogEntry log)
         {
             //return new datetime from log object
-            var dateFormat = "d/MMMM/YYYY";
+            var dateFormat = "d/MMMM/yyyy";
             var dateString = $"{log.Day}/{log.Month}/{log.Year}";
-            return DateTime.ParseExact(dateString, dateFormat, CultureInfo.InvariantCulture);
+            return DateTime.ParseExact(dateString, dateFormat, null);
         }
     }
 }
